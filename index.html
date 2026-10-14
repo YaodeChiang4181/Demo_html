@@ -1,1 +1,208 @@
-<!DOCTYPE html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>VDN v1 Complete</title><link rel="stylesheet" href="css/style.css"></head><body><canvas id="particleCanvas"></canvas><nav class="navbar"><div class="logo">VDN</div><a href="#dashboard">Dashboard</a></nav><header class="hero"><div><h1>AI 驅動校園虛擬學餐網絡</h1><p>供餐危機 → AI預測 → 智慧團購 → 熱點配送 → 成果分析</p></div></header><section class="section"><h2>校園供餐危機</h2><div class="grid"><div class="card reveal">男九學餐整修</div><div class="card reveal">松苑學餐整修</div><div class="card reveal">排隊40分鐘</div></div></section><section class="section dark"><h2>AI決策流程</h2><div class="flow"><div>Sensing</div><div>→</div><div>Seizing</div><div>→</div><div>Reconfiguring</div></div></section><section class="section"><h2>智慧團購</h2><button id="orderBtn">新增訂單</button><div class="bar"><div id="bar"></div></div><p id="status">0/10</p></section><section class="section dark"><h2>AI需求預測</h2><button id="predictBtn">開始預測</button><h3 id="prediction">--</h3></section><section id="dashboard" class="section"><h2>Dashboard</h2><div class="grid"><div class="card"><span id="m1">0</span><p>滿意度</p></div><div class="card"><span id="m2">0</span><p>合作店家</p></div><div class="card"><span id="m3">0</span><p>預測率</p></div></div></section><section class="section"><h2>Roadmap</h2><div class="grid"><div class="card">Pilot</div><div class="card">Rollout</div><div class="card">Scaling</div></div></section><script src="js/main.js"></script></body></html>
+<!doctype html>
+<html lang="zh-Hant">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="AI 驅動校園虛擬學餐網絡互動展示網站">
+  <title>AI Virtual Dining Network｜累積完整版本</title>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <canvas id="particleCanvas" aria-hidden="true"></canvas>
+  <nav class="navbar">
+    <a class="logo" href="#top">VDN</a>
+    <div class="navlinks">
+      <a href="#crisis">供餐危機</a><a href="#flow">AI Flow</a><a href="#simulator">需求預測</a><a href="#groupbuy">智慧團購</a><a href="#dashboard">Dashboard</a><a href="#theory">理論地圖</a><a href="#roadmap">Roadmap</a>
+    </div><button id="presentationMode" class="presentation-toggle" type="button">簡報模式</button>
+  </nav>
+
+  <header id="top" class="hero">
+    <div class="hero-inner reveal">
+      <span class="eyebrow">AI Powered Virtual Dining Network</span>
+      <h1>AI 驅動校園<br>虛擬學餐網絡</h1>
+      <p>供餐危機 → AI 預測 → 智慧團購 → 熱點配送 → 成果分析</p>
+      <div class="actions"><a class="btn primary" href="#crisis">開始探索</a><a class="btn ghost" href="#flow">執行 AI Flow</a></div>
+    </div>
+  </header>
+
+  <main>
+    <section id="crisis" class="section light">
+      <div class="container">
+        <p class="kicker">THE CHALLENGE</p><h2>雙學餐整修造成供餐危機</h2>
+        <div class="grid three">
+          <article class="card reveal"><span class="status danger">整修中</span><h3>男九學餐</h3><p>集中式供餐節點暫停運作。</p></article>
+          <article class="card reveal"><span class="status danger">整修中</span><h3>松苑學餐</h3><p>校園核心供餐容量同步下降。</p></article>
+          <article class="card metric-card reveal"><strong>30–40</strong><span>分鐘尖峰排隊時間</span></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="solution" class="section ink">
+      <div class="container">
+        <p class="kicker">THE SOLUTION</p><h2>從集中式學餐走向虛擬供餐網絡</h2>
+        <div class="compare">
+          <article class="glass reveal"><h3>傳統實體學餐</h3><ul><li>高度依賴固定建築</li><li>尖峰現場排隊</li><li>單點故障風險</li><li>需求資訊不可見</li></ul></article>
+          <div class="versus">VS</div>
+          <article class="glass featured reveal"><h3>AI 虛擬學餐</h3><ul><li>AI 需求預測</li><li>離峰提前備餐</li><li>智慧湊單與熱點配送</li><li>3 分鐘憑碼取餐</li></ul></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="flow" class="section flow-section">
+      <div class="container">
+        <p class="kicker">AI DECISION ENGINE</p><h2>動態能力 AI Flow</h2>
+        <p class="lead">按下按鈕，依序展示資料輸入、感知、抓住機會與物流重構。</p>
+        <div class="flow-grid">
+          <article class="flow-node" data-step="0"><small>01</small><h3>Data Inputs</h3><p>課表、天氣、歷史訂單、校園行事曆</p></article>
+          <div class="connector" data-line="0"></div>
+          <article class="flow-node" data-step="1"><small>02</small><h3>Sensing</h3><p>辨識系館與時段需求</p></article>
+          <div class="connector" data-line="1"></div>
+          <article class="flow-node" data-step="2"><small>03</small><h3>Seizing</h3><p>離峰備餐與智慧湊單</p></article>
+          <div class="connector" data-line="2"></div>
+          <article class="flow-node" data-step="3"><small>04</small><h3>Reconfiguring</h3><p>熱點配送與 3 分鐘取餐</p></article>
+        </div>
+        <div class="center"><button id="runFlow" class="btn primary">執行 AI Flow</button><button id="resetFlow" class="btn soft">重設</button><p id="flowLog" class="flow-log" aria-live="polite">等待執行</p></div>
+      </div>
+    </section>
+
+    <section id="simulator" class="section ink">
+      <div class="container narrow">
+        <p class="kicker">INTERACTIVE DEMO</p><h2>AI 需求預測模擬器</h2>
+        <div class="sim-card glass">
+          <label>天氣<select id="weather"><option value="sunny">晴天</option><option value="cloudy">陰天</option><option value="rain">雨天</option></select></label>
+          <label>考試週<select id="exam"><option value="no">否</option><option value="yes">是</option></select></label>
+          <label>校園人數 <output id="studentOutput">1000</output><input id="studentCount" type="range" min="100" max="3000" step="100" value="1000"></label>
+          <button id="predictBtn" class="btn primary">開始 AI 預測</button>
+          <div id="prediction" class="prediction">預測需求量：--</div>
+          <p class="note">此區為概念模擬，用於展示天氣、考試週與校園人數如何影響需求。</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="groupbuy" class="section light">
+      <div class="container narrow">
+        <p class="kicker">SMART GROUPING</p><h2>智慧團購門檻模擬</h2>
+        <div class="group-card card">
+          <div class="group-head"><h3>管理學院取餐熱點</h3><span id="orderCount">0 / 10</span></div>
+          <div class="progress"><div id="progressBar"></div></div>
+          <p id="groupStatus">再加入 10 份即可解鎖批量配送</p>
+          <div class="actions"><button id="addOrder" class="btn success">新增訂單</button><button id="resetOrders" class="btn soft">重設</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="logistics" class="section ink">
+      <div class="container">
+        <p class="kicker">LAST-MILE DELIVERY</p><h2>校園熱點物流模擬</h2>
+        <p class="lead">啟動配送後，餐點將由合作店家批量集貨，依序送往管理學院、工程大樓與綜合教學館。</p>
+        <div class="logistics-layout">
+          <div class="campus-map" aria-label="校園配送路線示意圖">
+            <svg viewBox="0 0 1000 520" role="img" aria-label="合作店家至三個校園取餐熱點的配送動畫">
+              <defs>
+                <linearGradient id="routeGradient" x1="0" x2="1"><stop offset="0" stop-color="#38bdf8"/><stop offset="1" stop-color="#10b981"/></linearGradient>
+                <filter id="glow"><feGaussianBlur stdDeviation="5" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+              </defs>
+              <path id="deliveryPath" d="M120 390 C260 390 250 120 430 140 S610 405 720 360 S820 155 900 130" fill="none" stroke="rgba(148,163,184,.32)" stroke-width="12" stroke-linecap="round"/>
+              <path id="deliveryProgress" d="M120 390 C260 390 250 120 430 140 S610 405 720 360 S820 155 900 130" fill="none" stroke="url(#routeGradient)" stroke-width="8" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" filter="url(#glow)"/>
+              <g class="map-point store"><circle cx="120" cy="390" r="28"/><text x="120" y="445">合作店家</text></g>
+              <g class="map-point hotspot" data-stop="1"><circle cx="430" cy="140" r="28"/><text x="430" y="95">管理學院</text></g>
+              <g class="map-point hotspot" data-stop="2"><circle cx="720" cy="360" r="28"/><text x="720" y="420">工程大樓</text></g>
+              <g class="map-point hotspot" data-stop="3"><circle cx="900" cy="130" r="28"/><text x="900" y="85">綜合教學館</text></g>
+              <g id="deliveryVehicle" class="vehicle" transform="translate(120 390)"><circle r="19"/><text x="0" y="6">●</text></g>
+            </svg>
+          </div>
+          <aside class="delivery-console glass">
+            <span class="console-label">DELIVERY CONTROL</span>
+            <h3 id="deliveryTitle">等待配送</h3>
+            <p id="deliveryMessage">批量訂單已完成整併，可啟動校園專車。</p>
+            <div class="delivery-progress"><div id="deliveryBar"></div></div>
+            <div class="delivery-stats"><div><strong id="deliveryPercent">0%</strong><span>配送進度</span></div><div><strong id="deliveryTime">--</strong><span>預估取餐</span></div></div>
+            <button id="startDelivery" class="btn primary">啟動配送模擬</button>
+            <button id="resetDelivery" class="btn soft">重設</button>
+          </aside>
+        </div>
+        <div class="pickup-panel" id="pickupPanel">
+          <div><span class="pickup-icon">✓</span><div><strong>配送完成</strong><p>動態取餐碼已發送，學生可於 3 分鐘內完成取餐。</p></div></div>
+          <div class="pickup-code"><span>取餐碼</span><strong id="pickupCode">----</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="dashboard" class="section dashboard">
+      <div class="container">
+        <p class="kicker">LIVE PERFORMANCE DASHBOARD</p><h2>VDN 營運決策儀表板</h2>
+        <p class="lead">切換情境，觀察 AI 虛擬學餐網絡在一般日、雨天與考試週的需求及配送表現。</p>
+        <div class="dashboard-toolbar" role="group" aria-label="儀表板情境選擇">
+          <button class="scenario-btn active" data-scenario="normal">一般上課日</button>
+          <button class="scenario-btn" data-scenario="rain">雨天情境</button>
+          <button class="scenario-btn" data-scenario="exam">考試週</button>
+        </div>
+        <div class="grid four dashboard-kpis">
+          <article class="dash-card reveal"><span>預測需求</span><strong id="dashDemand">548</strong><small>份餐點</small></article>
+          <article class="dash-card reveal"><span>湊單成功率</span><strong id="dashGrouping">88%</strong><small>目標高於 85%</small></article>
+          <article class="dash-card reveal"><span>平均取餐時間</span><strong id="dashPickup">2.8</strong><small>分鐘</small></article>
+          <article class="dash-card reveal"><span>熱點負載</span><strong id="dashLoad">72%</strong><small>目前容量使用</small></article>
+        </div>
+        <div class="analytics-grid">
+          <article class="analytics-card">
+            <div class="analytics-head"><div><span>DEMAND CURVE</span><h3>時段需求變化</h3></div><strong id="peakLabel">12:10 尖峰</strong></div>
+            <div class="chart-wrap"><svg id="demandChart" viewBox="0 0 760 300" role="img" aria-label="校園時段需求折線圖"><g class="chart-grid"><line x1="55" y1="35" x2="55" y2="250"/><line x1="55" y1="250" x2="730" y2="250"/><line x1="55" y1="180" x2="730" y2="180"/><line x1="55" y1="110" x2="730" y2="110"/><line x1="55" y1="40" x2="730" y2="40"/></g><path id="demandArea"/><polyline id="demandLine"/><g id="demandDots"></g><g class="chart-labels"><text x="55" y="278">10:30</text><text x="205" y="278">11:00</text><text x="355" y="278">11:30</text><text x="505" y="278">12:00</text><text x="655" y="278">12:30</text></g></svg></div>
+          </article>
+          <article class="analytics-card">
+            <div class="analytics-head"><div><span>HOTSPOT STATUS</span><h3>取餐熱點負載</h3></div><strong>即時模擬</strong></div>
+            <div class="hotspot-list">
+              <div class="hotspot-row"><div><b>管理學院</b><span id="hotspotAValue">78%</span></div><div class="mini-bar"><i id="hotspotA"></i></div></div>
+              <div class="hotspot-row"><div><b>工程大樓</b><span id="hotspotBValue">66%</span></div><div class="mini-bar"><i id="hotspotB"></i></div></div>
+              <div class="hotspot-row"><div><b>綜合教學館</b><span id="hotspotCValue">72%</span></div><div class="mini-bar"><i id="hotspotC"></i></div></div>
+              <div class="health-panel"><span class="health-dot"></span><div><b>系統狀態正常</b><p id="healthText">目前容量足以承接預測需求。</p></div></div>
+            </div>
+          </article>
+        </div>
+        <div class="benefit-strip">
+          <div><strong>40 → 3</strong><span>等待時間改善</span></div><div><strong>±3</strong><span>分鐘配送誤差目標</span></div><div><strong>50+</strong><span>目標合作店家</span></div><div><strong>99.99%</strong><span>平台可用性目標</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="theory" class="section theory-section">
+      <div class="container">
+        <p class="kicker">THEORETICAL FOUNDATION</p><h2>互動式理論架構地圖</h2>
+        <p class="lead">點選節點，查看理論如何映射至虛擬學餐的實際機制。</p>
+        <div class="theory-layout">
+          <div class="theory-map" role="group" aria-label="理論架構節點">
+            <button class="theory-node center-theory active" data-theory="vdn"><span>核心</span><b>AI Virtual Dining Network</b></button>
+            <button class="theory-node node-a" data-theory="resilience"><span>01</span><b>Supply Chain Resilience</b></button>
+            <button class="theory-node node-b" data-theory="capability"><span>02</span><b>Dynamic Capabilities</b></button>
+            <button class="theory-node node-c" data-theory="bullwhip"><span>03</span><b>Bullwhip Effect</b></button>
+            <button class="theory-node node-d" data-theory="lastmile"><span>04</span><b>Last-Mile Logistics</b></button>
+            <button class="theory-node node-e" data-theory="learning"><span>05</span><b>Institutional Learning</b></button>
+            <svg class="theory-lines" viewBox="0 0 800 560" aria-hidden="true"><line x1="400" y1="280" x2="150" y2="100"/><line x1="400" y1="280" x2="650" y2="100"/><line x1="400" y1="280" x2="700" y2="400"/><line x1="400" y1="280" x2="400" y2="500"/><line x1="400" y1="280" x2="100" y2="400"/></svg>
+          </div>
+          <aside class="theory-detail">
+            <span id="theoryNumber">CORE CONCEPT</span><h3 id="theoryTitle">AI 虛擬學餐網絡</h3><p id="theoryText">以 AI 預測、智慧團購、批量配送與數位取餐，將分散需求與校外供給整合成去中心化供餐網絡。</p>
+            <div class="theory-tags" id="theoryTags"><i>去中心化</i><i>需求可視性</i><i>韌性供餐</i></div>
+          </aside>
+        </div>
+        <div class="risk-learning-grid">
+          <article class="risk-card"><span>RISK CONTROL</span><h3>三層風險管控</h3><div class="risk-list"><button data-risk="food">食安與恆溫配送</button><button data-risk="sla">未取餐與 SLA</button><button data-risk="cloud">雲端高可用性</button></div><p id="riskDetail">建立店家履歷、恆溫保溫箱、責任險與測溫機制。</p></article>
+          <article class="learning-card"><span>CLOSED-LOOP LEARNING</span><h3>系統持續進化</h3><div class="learning-loop"><b>營運資料</b><em>→</em><b>異常提取</b><em>→</em><b>模型修正</b><em>→</em><b>參數優化</b></div><button id="runLearning" class="btn primary">執行學習閉環</button><p id="learningStatus">等待執行</p></article>
+        </div>
+      </div>
+    </section>
+
+    <section id="roadmap" class="section light">
+      <div class="container">
+        <p class="kicker">ROADMAP</p><h2>三階段推廣藍圖</h2>
+        <div class="timeline">
+          <article class="phase reveal"><span>PHASE 1</span><h3>Pilot</h3><p>特定系館試運行，驗證預測、湊單與取餐流程。</p></article>
+          <article class="phase reveal"><span>PHASE 2</span><h3>Full Rollout</h3><p>全校設置核心取餐熱點，擴大合作店家。</p></article>
+          <article class="phase reveal"><span>PHASE 3</span><h3>Scaling</h3><p>模組化輸出至其他大專院校。</p></article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer><strong>AI Virtual Dining Network</strong><span>校園智慧團購與虛擬學餐專案</span></footer>
+  <script src="js/main.js"></script>
+</body>
+</html>
