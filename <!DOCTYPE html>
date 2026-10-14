@@ -1,0 +1,720 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>
+        AI Virtual Dining Network｜
+        校園虛擬學餐網絡
+    </title>
+
+    <meta name="description"
+        content="AI驅動校園虛擬學餐網絡，結合需求預測、智慧團購與熱點配送，打造高韌性校園供餐系統。">
+
+    <link rel="preconnect"
+        href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+        href="https://fonts.gstatic.com"
+        crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Noto+Sans+TC:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet"
+        href="css/style.css">
+
+</head>
+
+<body>
+
+    <!-- ==========================
+         Particle Background
+    ========================== -->
+
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- ==========================
+         Navbar
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            VDN
+        </div>
+
+        <ul class="nav-links">
+
+            <li>
+                <a href="#problem">
+                    供餐危機
+                </a>
+            </li>
+
+            <li>
+                <a href="#solution">
+                    解決方案
+                </a>
+            </li>
+
+            <li>
+                <a href="#simulator">
+                    AI模擬
+                </a>
+            </li>
+
+            <li>
+                <a href="#dashboard">
+                    Dashboard
+                </a>
+            </li>
+
+            <li>
+                <a href="#roadmap">
+                    發展藍圖
+                </a>
+            </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- ==========================
+         Hero Section
+    ========================== -->
+
+    <section class="hero">
+
+        <div class="hero-content">
+
+            <span class="tag">
+                AI Powered Virtual Dining Network
+            </span>
+
+            <h1>
+                AI 驅動校園虛擬學餐網絡
+            </h1>
+
+            <p>
+                透過 AI 預測、智慧團購與定點配送，
+                打造兼具效率與韌性的校園供餐生態系。
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#problem"
+                    class="btn-primary">
+
+                    開始探索
+
+                </a>
+
+                <a href="#simulator"
+                    class="btn-secondary">
+
+                    體驗 AI 模擬
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         Problem
+    ========================== -->
+
+    <section
+        id="problem"
+        class="section">
+
+        <div class="container">
+
+            <h2>
+                校園供餐危機
+            </h2>
+
+            <div class="problem-grid">
+
+                <div class="problem-card reveal">
+
+                    <h3>
+                        男九學餐
+                    </h3>
+
+                    <p>
+                        整修中
+                    </p>
+
+                </div>
+
+                <div class="problem-card reveal">
+
+                    <h3>
+                        松苑學餐
+                    </h3>
+
+                    <p>
+                        整修中
+                    </p>
+
+                </div>
+
+            </div>
+
+            <div class="impact-panel">
+
+                <div class="counter-box">
+
+                    <span>
+                        供餐能力
+                    </span>
+
+                    <h3>
+                        35%
+                    </h3>
+
+                </div>
+
+                <div class="counter-box">
+
+                    <span>
+                        平均排隊時間
+                    </span>
+
+                    <h3>
+                        40分鐘
+                    </h3>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         Solution
+    ========================== -->
+
+    <section
+        id="solution"
+        class="section dark">
+
+        <div class="container">
+
+            <h2>
+                AI 虛擬學餐網絡
+            </h2>
+
+            <div class="compare-grid">
+
+                <div class="compare-card reveal">
+
+                    <h3>
+                        傳統學餐
+                    </h3>
+
+                    <ul>
+
+                        <li>集中式供餐</li>
+
+                        <li>依賴固定建築</li>
+
+                        <li>現場排隊</li>
+
+                        <li>單點故障風險</li>
+
+                    </ul>
+
+                </div>
+
+                <div class="compare-card highlight reveal">
+
+                    <h3>
+                        AI Virtual Dining Network
+                    </h3>
+
+                    <ul>
+
+                        <li>AI需求預測</li>
+
+                        <li>智慧團購撮合</li>
+
+                        <li>熱點配送</li>
+
+                        <li>三分鐘快速取餐</li>
+
+                    </ul>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         AI Flow
+    ========================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2>
+                AI 決策核心引擎
+            </h2>
+
+            <div class="flow-container">
+
+                <div class="flow-step reveal">
+
+                    <h3>
+                        Data Inputs
+                    </h3>
+
+                    <p>
+                        課表、天氣、訂單資料
+                    </p>
+
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div class="flow-step reveal">
+
+                    <h3>
+                        Sensing
+                    </h3>
+
+                    <p>
+                        AI需求預測
+                    </p>
+
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div class="flow-step reveal">
+
+                    <h3>
+                        Seizing
+                    </h3>
+
+                    <p>
+                        智慧湊單
+                    </p>
+
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div class="flow-step reveal">
+
+                    <h3>
+                        Reconfiguring
+                    </h3>
+
+                    <p>
+                        物流重構
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         Simulator
+    ========================== -->
+
+    <section
+        id="simulator"
+        class="section dark">
+
+        <div class="container">
+
+            <h2>
+                AI需求預測模擬器
+            </h2>
+
+            <div class="simulator-card">
+
+                <div class="form-group">
+
+                    <label>
+                        天氣狀況
+                    </label>
+
+                    <select id="weather">
+
+                        <option value="sunny">
+                            晴天
+                        </option>
+
+                        <option value="cloudy">
+                            陰天
+                        </option>
+
+                        <option value="rain">
+                            雨天
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        是否考試週
+                    </label>
+
+                    <select id="exam">
+
+                        <option value="no">
+                            否
+                        </option>
+
+                        <option value="yes">
+                            是
+                        </option>
+
+                    </select>
+
+                </div>
+
+                <div class="form-group">
+
+                    <label>
+                        校園人數
+                    </label>
+
+                    <input
+                        id="studentCount"
+                        type="range"
+                        min="100"
+                        max="3000"
+                        value="1000">
+
+                </div>
+
+                <button id="predictBtn">
+
+                    開始AI預測
+
+                </button>
+
+                <div id="predictionResult">
+
+                    預測需求量：--
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         Group Buy
+    ========================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2>
+                智慧團購模擬
+            </h2>
+
+            <div class="group-buy-panel">
+
+                <h3>
+                    管理學院熱點
+                </h3>
+
+                <div class="progress-container">
+
+                    <div id="groupProgress"></div>
+
+                </div>
+
+                <button id="addOrderBtn">
+
+                    新增訂單
+
+                </button>
+
+                <p id="groupResult">
+
+                    0 / 10
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         Delivery
+    ========================== -->
+
+    <section class="section dark">
+
+        <div class="container">
+
+            <h2>
+                智慧物流配送
+            </h2>
+
+            <div class="delivery-route">
+
+                <div class="route-item">
+                    合作店家
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div class="route-item">
+                    AI 配送中心
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div class="route-item">
+                    取餐熱點
+                </div>
+
+                <div class="arrow">
+                    →
+                </div>
+
+                <div class="route-item">
+                    學生取餐
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         Benefits
+    ========================== -->
+
+    <section class="section">
+
+        <div class="container">
+
+            <h2>
+                三方共贏效益
+            </h2>
+
+            <div class="benefit-grid">
+
+                <div class="benefit-card reveal">
+
+                    <h3>
+                        學生
+                    </h3>
+
+                    <span>
+                        40分鐘 ➜ 3分鐘
+                    </span>
+
+                </div>
+
+                <div class="benefit-card reveal">
+
+                    <h3>
+                        店家
+                    </h3>
+
+                    <span>
+                        活化離峰產能
+                    </span>
+
+                </div>
+
+                <div class="benefit-card reveal">
+
+                    <h3>
+                        校園
+                    </h3>
+
+                    <span>
+                        提升系統韌性
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         Dashboard
+    ========================== -->
+
+    <section
+        id="dashboard"
+        class="section dark">
+
+        <div class="container">
+
+            <h2>
+                VDN Dashboard
+            </h2>
+
+            <div class="dashboard-grid">
+
+                <div class="metric reveal">
+
+                    <h3 id="metricPickup">
+                        2.8
+                    </h3>
+
+                    <p>
+                        平均取餐時間
+                    </p>
+
+                </div>
+
+                <div class="metric reveal">
+
+                    <h3 id="metricSatisfaction">
+                        92%
+                    </h3>
+
+                    <p>
+                        學生滿意度
+                    </p>
+
+                </div>
+
+                <div class="metric reveal">
+
+                    <h3 id="metricForecast">
+                        88%
+                    </h3>
+
+                    <p>
+                        預測準確率
+                    </p>
+
+                </div>
+
+                <div class="metric reveal">
+
+                    <h3>
+                        50+
+                    </h3>
+
+                    <p>
+                        合作店家
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-- ==========================
+         Roadmap
+    ========================== -->
+
+    <section
+        id="roadmap"
+        class="section">
+
+        <div class="container">
+
+            <h2>
+                三階段推廣藍圖
+            </h2>
+
+            <div class="timeline">
+
+                <div class="timeline-item reveal">
+
+                    <h3>
+                        Phase 1
+                    </h3>
+
+                    <h4>
+                        Pilot
+                    </h4>
+
+                    <p>
+                        部分系館試營運
+                    </p>
+
+                </div>
+
+                <div class="timeline-item reveal">
+
+                    <h3>
+                        Phase 2
+                    </h3>
+
+                    <h4>
+                        Full Rollout
+                    </h4>
+
+                    <p>
+                        全校正式上線
+                    </p>
+
+                </div>
+
+                <div class="timeline-item reveal">
+
+                    <h3>
+                        Phase 3
+                    </h3>
+
+                    <h4>
+                        Scaling
+                    </h4>
+
+                    <p>
+                        跨校複製推廣
+                    </p>
+
+                </div>
+
+            </div>
