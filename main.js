@@ -1,1 +1,0 @@
-document.getElementById("predictBtn")?.addEventListener("click",()=>{document.getElementById("predictionResult").textContent="預測需求量：548份"});
