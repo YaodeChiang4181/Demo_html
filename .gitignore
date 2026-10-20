@@ -1,0 +1,11 @@
+# Ignore temporary generation scripts and extraction folders
+*.ps1
+*.py
+*.pdf
+*.lnk
+*.log
+*.txt
+*.json
+extracted_img/
+rendered_slides/
+.system_generated/
