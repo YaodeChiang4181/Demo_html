@@ -1,5 +1,6 @@
 <!doctype html>
 <html lang="zh-Hant">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,9 +8,12 @@
   <title>食不我予｜AI 驅動校園虛擬學餐網絡 ── 期中報告互動展示</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Outfit:wght@400;600;700;800&family=Zen+Maru+Gothic:wght@500;700;900&display=swap" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css2?family=Noto+Serif+TC:wght@600;700;900&family=Outfit:wght@400;600;700;800&family=Zen+Maru+Gothic:wght@500;700;900&display=swap"
+    rel="stylesheet">
   <link rel="stylesheet" href="style.css?v=6">
 </head>
+
 <body class="grid-paper-theme">
   <!-- 暖色微光畫布 -->
   <canvas id="particleCanvas" aria-hidden="true"></canvas>
@@ -50,7 +54,7 @@
       <div class="report-badge">知行合一 · 期中專題報告</div>
       <h1 class="hero-title">食不我予</h1>
       <p class="hero-subtitle">利用自動化團購系統解決餐點難抉擇、飲食趨勢問題</p>
-      
+
       <div class="hero-narrative-tag">
         <span>雙學餐整修衝擊</span>
         <span class="arrow">➔</span>
@@ -281,18 +285,19 @@
           <h3 class="subsection-title">點擊節點探索理論如何落地映射：</h3>
           <div class="theory-layout">
             <div class="theory-map" role="group" aria-label="理論架構節點">
-              <button class="theory-node center-theory active" data-theory="vdn"><span>核心</span><b>AI Virtual Dining Network</b></button>
+              <button class="theory-node center-theory active" data-theory="vdn"><span>核心</span><b>AI Virtual Dining
+                  Network</b></button>
               <button class="theory-node node-a" data-theory="resilience"><span>01</span><b>供應鏈韌性流派</b></button>
               <button class="theory-node node-b" data-theory="capability"><span>02</span><b>動態能力理論</b></button>
               <button class="theory-node node-c" data-theory="bullwhip"><span>03</span><b>牛鞭效應減緩</b></button>
               <button class="theory-node node-d" data-theory="lastmile"><span>04</span><b>最後一哩熱點物流</b></button>
               <button class="theory-node node-e" data-theory="learning"><span>05</span><b>適應性商業模式</b></button>
               <svg class="theory-lines" viewBox="0 0 800 560" aria-hidden="true">
-                <line x1="400" y1="280" x2="150" y2="100"/>
-                <line x1="400" y1="280" x2="650" y2="100"/>
-                <line x1="400" y1="280" x2="700" y2="400"/>
-                <line x1="400" y1="280" x2="400" y2="500"/>
-                <line x1="400" y1="280" x2="100" y2="400"/>
+                <line x1="400" y1="280" x2="150" y2="100" />
+                <line x1="400" y1="280" x2="650" y2="100" />
+                <line x1="400" y1="280" x2="700" y2="400" />
+                <line x1="400" y1="280" x2="400" y2="500" />
+                <line x1="400" y1="280" x2="100" y2="400" />
               </svg>
             </div>
             <aside class="theory-detail dark-console-shell">
@@ -406,7 +411,9 @@
               <h3>管理學院取餐熱點 (管二大樓)</h3>
               <span id="orderCount" class="order-badge">0 / 10</span>
             </div>
-            <div class="progress"><div id="progressBar"></div></div>
+            <div class="progress">
+              <div id="progressBar"></div>
+            </div>
             <p id="groupStatus" class="group-status-text">再加入 10 份即可解鎖批量配送與免運門檻</p>
             <div class="actions">
               <button id="addOrder" class="btn success-warm">+ 加入 1 份訂單</button>
@@ -427,28 +434,46 @@
               <svg viewBox="0 0 1000 520" role="img" aria-label="合作店家至三個校園取餐熱點的配送動畫">
                 <defs>
                   <linearGradient id="routeGradient" x1="0" x2="1">
-                    <stop offset="0%" stop-color="#f59e0b"/>
-                    <stop offset="100%" stop-color="#10b981"/>
+                    <stop offset="0%" stop-color="#f59e0b" />
+                    <stop offset="100%" stop-color="#10b981" />
                   </linearGradient>
                   <filter id="glow">
-                    <feGaussianBlur stdDeviation="5" result="b"/>
-                    <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+                    <feGaussianBlur stdDeviation="5" result="b" />
+                    <feMerge>
+                      <feMergeNode in="b" />
+                      <feMergeNode in="SourceGraphic" />
+                    </feMerge>
                   </filter>
                 </defs>
-                <path id="deliveryPath" d="M120 390 C260 390 250 120 430 140 S610 405 720 360 S820 155 900 130" fill="none" stroke="rgba(148,163,184,.3)" stroke-width="12" stroke-linecap="round"/>
-                <path id="deliveryProgress" d="M120 390 C260 390 250 120 430 140 S610 405 720 360 S820 155 900 130" fill="none" stroke="url(#routeGradient)" stroke-width="8" stroke-linecap="round" pathLength="100" stroke-dasharray="100" stroke-dashoffset="100" filter="url(#glow)"/>
-                <g class="map-point store"><circle cx="120" cy="390" r="28"/><text x="120" y="445">合作店家 (校外)</text></g>
-                <g class="map-point hotspot" data-stop="1"><circle cx="430" cy="140" r="28"/><text x="430" y="95">管理學院</text></g>
-                <g class="map-point hotspot" data-stop="2"><circle cx="720" cy="360" r="28"/><text x="720" y="420">工程大樓</text></g>
-                <g class="map-point hotspot" data-stop="3"><circle cx="900" cy="130" r="28"/><text x="900" y="85">綜合教學館</text></g>
-                <g id="deliveryVehicle" class="vehicle" transform="translate(120 390)"><circle r="19"/><text x="0" y="6">🛵</text></g>
+                <path id="deliveryPath" d="M120 390 C260 390 250 120 430 140 S610 405 720 360 S820 155 900 130"
+                  fill="none" stroke="rgba(148,163,184,.3)" stroke-width="12" stroke-linecap="round" />
+                <path id="deliveryProgress" d="M120 390 C260 390 250 120 430 140 S610 405 720 360 S820 155 900 130"
+                  fill="none" stroke="url(#routeGradient)" stroke-width="8" stroke-linecap="round" pathLength="100"
+                  stroke-dasharray="100" stroke-dashoffset="100" filter="url(#glow)" />
+                <g class="map-point store">
+                  <circle cx="120" cy="390" r="28" /><text x="120" y="445">合作店家 (校外)</text>
+                </g>
+                <g class="map-point hotspot" data-stop="1">
+                  <circle cx="430" cy="140" r="28" /><text x="430" y="95">管理學院</text>
+                </g>
+                <g class="map-point hotspot" data-stop="2">
+                  <circle cx="720" cy="360" r="28" /><text x="720" y="420">工程大樓</text>
+                </g>
+                <g class="map-point hotspot" data-stop="3">
+                  <circle cx="900" cy="130" r="28" /><text x="900" y="85">綜合教學館</text>
+                </g>
+                <g id="deliveryVehicle" class="vehicle" transform="translate(120 390)">
+                  <circle r="19" /><text x="0" y="6">🛵</text>
+                </g>
               </svg>
             </div>
             <aside class="delivery-console dark-console-shell">
               <span class="console-label">LOGISTICS DISPATCH</span>
               <h3 id="deliveryTitle">等待專車出發</h3>
               <p id="deliveryMessage">批量訂單已完成整併，可啟動校園巡迴配送。</p>
-              <div class="delivery-progress"><div id="deliveryBar"></div></div>
+              <div class="delivery-progress">
+                <div id="deliveryBar"></div>
+              </div>
               <div class="delivery-stats">
                 <div><strong id="deliveryPercent">0%</strong><span>配送進度</span></div>
                 <div><strong id="deliveryTime">--</strong><span>預估取餐時間</span></div>
@@ -487,28 +512,34 @@
             <button class="scenario-btn" data-scenario="exam">📖 考試週尖峰</button>
           </div>
           <div class="grid four dashboard-kpis">
-            <article class="dash-card reveal"><span>預測需求量</span><strong id="dashDemand">548</strong><small>份餐點</small></article>
-            <article class="dash-card reveal"><span>湊單成功率</span><strong id="dashGrouping">88%</strong><small>目標高於 85%</small></article>
-            <article class="dash-card reveal"><span>平均取餐時間</span><strong id="dashPickup">2.8</strong><small>分鐘</small></article>
-            <article class="dash-card reveal"><span>熱點負載率</span><strong id="dashLoad">72%</strong><small>目前容量使用</small></article>
+            <article class="dash-card reveal"><span>預測需求量</span><strong id="dashDemand">548</strong><small>份餐點</small>
+            </article>
+            <article class="dash-card reveal"><span>湊單成功率</span><strong id="dashGrouping">88%</strong><small>目標高於
+                85%</small></article>
+            <article class="dash-card reveal"><span>平均取餐時間</span><strong id="dashPickup">2.8</strong><small>分鐘</small>
+            </article>
+            <article class="dash-card reveal"><span>熱點負載率</span><strong id="dashLoad">72%</strong><small>目前容量使用</small>
+            </article>
           </div>
           <div class="analytics-grid">
             <article class="analytics-card dark-console-shell">
               <div class="analytics-head">
-                <div><span>DEMAND CURVE</span><h3>校園時段需求變化曲線</h3></div>
+                <div><span>DEMAND CURVE</span>
+                  <h3>校園時段需求變化曲線</h3>
+                </div>
                 <strong id="peakLabel" class="peak-badge">12:10 尖峰</strong>
               </div>
               <div class="chart-wrap">
                 <svg id="demandChart" viewBox="0 0 760 300" role="img" aria-label="校園時段需求折線圖">
                   <g class="chart-grid">
-                    <line x1="55" y1="35" x2="55" y2="250"/>
-                    <line x1="55" y1="250" x2="730" y2="250"/>
-                    <line x1="55" y1="180" x2="730" y2="180"/>
-                    <line x1="55" y1="110" x2="730" y2="110"/>
-                    <line x1="55" y1="40" x2="730" y2="40"/>
+                    <line x1="55" y1="35" x2="55" y2="250" />
+                    <line x1="55" y1="250" x2="730" y2="250" />
+                    <line x1="55" y1="180" x2="730" y2="180" />
+                    <line x1="55" y1="110" x2="730" y2="110" />
+                    <line x1="55" y1="40" x2="730" y2="40" />
                   </g>
-                  <path id="demandArea"/>
-                  <polyline id="demandLine"/>
+                  <path id="demandArea" />
+                  <polyline id="demandLine" />
                   <g id="demandDots"></g>
                   <g class="chart-labels">
                     <text x="55" y="278">10:30</text>
@@ -522,7 +553,9 @@
             </article>
             <article class="analytics-card dark-console-shell">
               <div class="analytics-head">
-                <div><span>HOTSPOT LOAD</span><h3>取餐熱點負載監控</h3></div>
+                <div><span>HOTSPOT LOAD</span>
+                  <h3>取餐熱點負載監控</h3>
+                </div>
                 <strong class="live-status">即時模擬中</strong>
               </div>
               <div class="hotspot-list">
@@ -606,26 +639,28 @@
             <div class="triangle-chart-wrap">
               <svg viewBox="0 0 540 280" class="triangle-svg" role="img" aria-label="韌性三角形對比圖：無對策損失 vs AI介入降低損失">
                 <!-- 基準線 -->
-                <line x1="60" y1="40" x2="480" y2="40" stroke="#78716c" stroke-width="2" stroke-dasharray="4"/>
+                <line x1="60" y1="40" x2="480" y2="40" stroke="#78716c" stroke-width="2" stroke-dasharray="4" />
                 <text x="400" y="32" fill="#78716c" font-size="12">正常水準 100%</text>
 
                 <!-- 無對策凹陷三角形 (深灰/紅褐色) -->
-                <polygon points="120,40 120,190 380,40" fill="rgba(220, 38, 38, 0.18)" stroke="#dc2626" stroke-width="2.5"/>
+                <polygon points="120,40 120,190 380,40" fill="rgba(220, 38, 38, 0.18)" stroke="#dc2626"
+                  stroke-width="2.5" />
                 <text x="175" y="125" fill="#b91c1c" font-weight="bold" font-size="13">無對策損失面積 (20,580 人·天)</text>
 
                 <!-- AI介入改善後凹陷三角形 (綠色虛線路徑) -->
-                <polygon points="120,40 120,135 320,40" fill="rgba(16, 185, 129, 0.22)" stroke="#059669" stroke-width="2.5" stroke-dasharray="5"/>
+                <polygon points="120,40 120,135 320,40" fill="rgba(16, 185, 129, 0.22)" stroke="#059669"
+                  stroke-width="2.5" stroke-dasharray="5" />
                 <text x="165" y="75" fill="#047857" font-weight="bold" font-size="13">AI 介入後降至 15,327 人·天</text>
 
                 <!-- 座標軸與標籤 -->
-                <line x1="60" y1="230" x2="480" y2="230" stroke="#44403c" stroke-width="2"/>
-                <line x1="60" y1="20" x2="60" y2="230" stroke="#44403c" stroke-width="2"/>
-                
+                <line x1="60" y1="230" x2="480" y2="230" stroke="#44403c" stroke-width="2" />
+                <line x1="60" y1="20" x2="60" y2="230" stroke="#44403c" stroke-width="2" />
+
                 <text x="65" y="45" fill="#44403c" font-size="11">100%</text>
                 <text x="5" y="138" fill="#059669" font-size="11" font-weight="bold">80% (AI)</text>
                 <text x="0" y="194" fill="#dc2626" font-size="11" font-weight="bold">71% (無對策)</text>
                 <text x="45" y="235" fill="#44403c" font-size="11">0</text>
-                
+
                 <text x="100" y="255" fill="#78716c" font-size="11">危機發生</text>
                 <text x="320" y="255" fill="#78716c" font-size="11">60天過渡期恢復</text>
                 <text x="450" y="255" fill="#78716c" font-size="11">時間</text>
@@ -674,48 +709,75 @@
             <!-- Tab 1 -->
             <div class="tab-panel active" id="tab1">
               <div class="c-card paper-card">
-                <div class="c-header"><span class="badge-q">問題 1</span><h4>缺乏真實校園用餐數據</h4></div>
-                <p class="c-solution"><strong>因應策略：</strong>透過學生問卷調查、尖峰時段實地人流觀察與定點計時，建立專案初步資料集。資料不足部分採用合理的參數假設進行情境模擬，並於文獻中清楚註記資料來源。</p>
+                <div class="c-header"><span class="badge-q">問題 1</span>
+                  <h4>缺乏真實校園用餐數據</h4>
+                </div>
+                <p class="c-solution">
+                  <strong>因應策略：</strong>透過學生問卷調查、尖峰時段實地人流觀察與定點計時，建立專案初步資料集。資料不足部分採用合理的參數假設進行情境模擬，並於文獻中清楚註記資料來源。
+                </p>
               </div>
               <div class="c-card paper-card mt-3">
-                <div class="c-header"><span class="badge-q">問題 2</span><h4>難以取得合作店家產能及營業機密</h4></div>
-                <p class="c-solution"><strong>因應策略：</strong>深度訪談少數願意合作之店家，僅蒐集產能區間（如每 15 分鐘最大備餐數）而非營業機密；未取得數據則透過文獻、公開市場資訊與敏感度分析處理。</p>
+                <div class="c-header"><span class="badge-q">問題 2</span>
+                  <h4>難以取得合作店家產能及營業機密</h4>
+                </div>
+                <p class="c-solution"><strong>因應策略：</strong>深度訪談少數願意合作之店家，僅蒐集產能區間（如每 15
+                  分鐘最大備餐數）而非營業機密；未取得數據則透過文獻、公開市場資訊與敏感度分析處理。</p>
               </div>
             </div>
 
             <!-- Tab 2 -->
             <div class="tab-panel" id="tab2">
               <div class="c-card paper-card">
-                <div class="c-header"><span class="badge-q">問題 1</span><h4>AI 需求預測模型的準確性與過擬合</h4></div>
-                <p class="c-solution"><strong>因應策略：</strong>先建立歷史平均值與簡單多元迴歸作為基準模型 (Baseline)，再評估進階機器學習演算法，嚴格採用 MAE、RMSE 與 WAPE 等指標進行預測性能交叉評比。</p>
+                <div class="c-header"><span class="badge-q">問題 1</span>
+                  <h4>AI 需求預測模型的準確性與過擬合</h4>
+                </div>
+                <p class="c-solution"><strong>因應策略：</strong>先建立歷史平均值與簡單多元迴歸作為基準模型 (Baseline)，再評估進階機器學習演算法，嚴格採用 MAE、RMSE
+                  與 WAPE 等指標進行預測性能交叉評比。</p>
               </div>
               <div class="c-card paper-card mt-3">
-                <div class="c-header"><span class="badge-q">問題 2</span><h4>AI 與一般規則式系統的界線不明確</h4></div>
-                <p class="c-solution"><strong>因應策略：</strong>在架構上明確切割「AI 需求預測模組」與「規則式湊單模組」，並透過對照實驗比較「有無導入 AI」的模擬成果，證明 AI 是否真正改善備料決策品質。</p>
+                <div class="c-header"><span class="badge-q">問題 2</span>
+                  <h4>AI 與一般規則式系統的界線不明確</h4>
+                </div>
+                <p class="c-solution"><strong>因應策略：</strong>在架構上明確切割「AI 需求預測模組」與「規則式湊單模組」，並透過對照實驗比較「有無導入 AI」的模擬成果，證明 AI
+                  是否真正改善備料決策品質。</p>
               </div>
             </div>
 
             <!-- Tab 3 -->
             <div class="tab-panel" id="tab3">
               <div class="c-card paper-card">
-                <div class="c-header"><span class="badge-q">問題 1</span><h4>前後端與跨功能模組整合困難</h4></div>
-                <p class="c-solution"><strong>因應策略：</strong>全系統採取高內聚、低耦合的模組化架構，預先制定標準 JSON 接口與統一資料表架構，逐步串接功能，大幅降低系統整合複雜度。</p>
+                <div class="c-header"><span class="badge-q">問題 1</span>
+                  <h4>前後端與跨功能模組整合困難</h4>
+                </div>
+                <p class="c-solution"><strong>因應策略：</strong>全系統採取高內聚、低耦合的模組化架構，預先制定標準 JSON
+                  接口與統一資料表架構，逐步串接功能，大幅降低系統整合複雜度。</p>
               </div>
               <div class="c-card paper-card mt-3">
-                <div class="c-header"><span class="badge-q">問題 2</span><h4>真實系統開發成本高、專案時間有限</h4></div>
-                <p class="c-solution"><strong>因應策略：</strong>優先製作最小可行性產品（MVP），透過可操作的模擬訂單、預測結果與互動儀表板驗證核心概念，第一階段聚焦於商業價值證明而非繁雜全功能。</p>
+                <div class="c-header"><span class="badge-q">問題 2</span>
+                  <h4>真實系統開發成本高、專案時間有限</h4>
+                </div>
+                <p class="c-solution">
+                  <strong>因應策略：</strong>優先製作最小可行性產品（MVP），透過可操作的模擬訂單、預測結果與互動儀表板驗證核心概念，第一階段聚焦於商業價值證明而非繁雜全功能。
+                </p>
               </div>
             </div>
 
             <!-- Tab 4 -->
             <div class="tab-panel" id="tab4">
               <div class="c-card paper-card">
-                <div class="c-header"><span class="badge-q">問題 1</span><h4>如何量化供餐韌性 (Resilience)</h4></div>
-                <p class="c-solution"><strong>因應策略：</strong>定義供餐功能水準 Q、功能損失程度以及過渡期恢復時間，嚴格利用學術界認可之「韌性三角形 (Resilience Triangle)」量化評估方案前後之效益差異。</p>
+                <div class="c-header"><span class="badge-q">問題 1</span>
+                  <h4>如何量化供餐韌性 (Resilience)</h4>
+                </div>
+                <p class="c-solution"><strong>因應策略：</strong>定義供餐功能水準 Q、功能損失程度以及過渡期恢復時間，嚴格利用學術界認可之「韌性三角形 (Resilience
+                  Triangle)」量化評估方案前後之效益差異。</p>
               </div>
               <div class="c-card paper-card mt-3">
-                <div class="c-header"><span class="badge-q">問題 2</span><h4>模擬結果與真實世界可能存在落差</h4></div>
-                <p class="c-solution"><strong>因應策略：</strong>在專案中逐條列出模型核心假設、參數邊界與限制，進行不同極端需求衝擊下的敏感度分析，並於試點系館蒐集小規模實測資料予以持續校準。</p>
+                <div class="c-header"><span class="badge-q">問題 2</span>
+                  <h4>模擬結果與真實世界可能存在落差</h4>
+                </div>
+                <p class="c-solution">
+                  <strong>因應策略：</strong>在專案中逐條列出模型核心假設、參數邊界與限制，進行不同極端需求衝擊下的敏感度分析，並於試點系館蒐集小規模實測資料予以持續校準。
+                </p>
               </div>
             </div>
           </div>
@@ -760,8 +822,8 @@
           <h2>THANK YOU FOR LISTENING</h2>
           <p class="thank-sub">食不我予 · 知行合一期中報告展示平台</p>
           <div class="thank-footer">
-            <span>AI Virtual Dining Network 專案團隊</span>
-            <span>國立政治大學 / 跨領域管理與資訊實踐</span>
+            <span>經濟三 蔣耀德 洪惠慈、資訊二 黃彥晨、財金三 </span>
+            <span>國立中央大學</span>
           </div>
         </div>
       </div>
@@ -786,4 +848,5 @@
 
   <script src="main.js?v=6"></script>
 </body>
+
 </html>
